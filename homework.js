@@ -5,6 +5,24 @@
 //
 // If the potential member is not in the array, return the array unchanged.
 // If the potential member is in the array, remove all instances of it from the array.
+// let team = ["Cadence", "Ordel", "Marion"]
+// let smallTeam = []
+
+// for (let teamMember of team) {
+//     if (function remove(team, teamMember){
+//     smallTeam.push(teamMember) }) }
+    
+// function remove(group, person){
+//     let group = ["person1", "person2", "person3"]
+//     let newGroup = []
+
+//     for 
+// }
+
+// let team = ["Cadence", "Ordel", "Marion"]
+// let remove = team.filter(function (team, teamMember){
+//     for (let teamMember of team)
+// })
 
 // 2. Revisit your "remove" function. Make sure that it does not change the original
 // array but instead returns a new array.
@@ -12,11 +30,37 @@
 // 3. Create a function called "sum" that takes an array of numbers and
 // returns the sum of those numbers.
 
+function sum (numbers){
+    return numbers.reduce(function (total, number){
+        return total + number
+    }, 0)
+}
+
+
 // 4. Create a function called "average" that takes an array of numbers
 // and returns the average of those numbers.
 
+function average (numbers){
+    if (numbers.length > 0)
+        return sum(numbers)/numbers.length
+    else 
+        return undefined
+}
+
 // 5. Create a function called "minimum" that takes an array of numbers and
 // returns the smallest number in that array.
+function minimum (numbers){
+    if (numbers.length === 0){
+        return undefined
+    } else (numbers.length > 0)
+        return numbers.reduce(function (current, number){
+            if (number < current){
+                return number
+                } else {
+            return current
+        }
+    })
+}
 
 // 6. There are many techniques to sort arrays in programming. Your programming
 // language will likely include the ability to do this. We are going to
