@@ -108,3 +108,10 @@ function selectionSort(numbers){
 //
 // For example, `textList(['Cadence', 'Ordel', 'Marion'])` results in the string
 // `"Cadence,Ordel,Marion"`.
+function textList (array){
+    if (array.length > 1){
+        return array.toString()
+    } else if (array.length === 1){
+        return array[0].toString()
+    } else return ''
+}
