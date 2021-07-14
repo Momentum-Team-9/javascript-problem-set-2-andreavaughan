@@ -5,27 +5,30 @@
 //
 // If the potential member is not in the array, return the array unchanged.
 // If the potential member is in the array, remove all instances of it from the array.
-// let team = ["Cadence", "Ordel", "Marion"]
-// let smallTeam = []
 
-// for (let teamMember of team) {
-//     if (function remove(team, teamMember){
-//     smallTeam.push(teamMember) }) }
-    
-// function remove(group, person){
-//     let group = ["person1", "person2", "person3"]
-//     let newGroup = []
-
-//     for 
-// }
-
-// let team = ["Cadence", "Ordel", "Marion"]
-// let remove = team.filter(function (team, teamMember){
-//     for (let teamMember of team)
-// })
+function remove(array, member){
+    let filteredArray = array.filter(function (element){
+        if (member === element){
+            return false
+        } else {
+            return true
+        }
+    })
+}
 
 // 2. Revisit your "remove" function. Make sure that it does not change the original
 // array but instead returns a new array.
+
+function remove(array, member){
+    let filteredArray = array.filter(function (element){
+        if (member === element){
+            return false
+        } else {
+            return true
+        }
+    })
+    return filteredArray 
+}
 
 // 3. Create a function called "sum" that takes an array of numbers and
 // returns the sum of those numbers.
@@ -35,7 +38,6 @@ function sum (numbers){
         return total + number
     }, 0)
 }
-
 
 // 4. Create a function called "average" that takes an array of numbers
 // and returns the average of those numbers.
@@ -85,6 +87,21 @@ function minimum (numbers){
 // Note 2: Selection sort can be implemented using one array. Read the explanation at
 // https://courses.cs.vt.edu/csonline/Algorithms/Lessons/SelectionSort/index.html
 // to see how. This may make more sense to you.
+
+function selectionSort(numbers){
+    let numbersCopy = [...numbers]
+    let numbersNew = []
+    if (numbersCopy.length > 1){
+        for (let i = 0; i < numbers.length; i++){
+            let minNum = minimum (numbersCopy)
+            numbersNew.push(minNum)
+            numbersCopy = remove (numbersCopy, minNum)
+        } return numbersNew
+    } else if (numbersCopy.length === 1){
+        return numbersCopy
+    } else
+        return []
+}
 
 // 7. Create a function called `textList` that takes an array and joins its elements
 // into a string separated by commas.

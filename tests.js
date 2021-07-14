@@ -2,49 +2,49 @@
 
 var assert = chai.assert
 
-// describe('remove', function () {
-//   it('returns an array with the element removed', function () {
-//     assert.deepEqual(
-//       ['Cadence', 'Ordel'],
-//       remove(['Cadence', 'Ordel', 'Marion'], 'Marion')
-//     )
-//   })
+describe('remove', function () {
+  it('returns an array with the element removed', function () {
+    assert.deepEqual(
+      ['Cadence', 'Ordel'],
+      remove(['Cadence', 'Ordel', 'Marion'], 'Marion')
+    )
+  })
 
-//   it('returns the same array if the element is not in the array', function () {
-//     assert.deepEqual(
-//       ['Cadence', 'Ordel', 'Marion'],
-//       remove(['Cadence', 'Ordel', 'Marion'], 'Riley')
-//     )
-//   })
+  it('returns the same array if the element is not in the array', function () {
+    assert.deepEqual(
+      ['Cadence', 'Ordel', 'Marion'],
+      remove(['Cadence', 'Ordel', 'Marion'], 'Riley')
+    )
+  })
 
-//   it('removes all incidences of the element', function () {
-//     assert.deepEqual(
-//       ['Cadence', 'Ordel'],
-//       remove(['Cadence', 'Marion', 'Ordel', 'Marion'], 'Marion')
-//     )
-//   })
-// })
+  it('removes all incidences of the element', function () {
+    assert.deepEqual(
+      ['Cadence', 'Ordel'],
+      remove(['Cadence', 'Marion', 'Ordel', 'Marion'], 'Marion')
+    )
+  })
+})
 
-// describe('remove (preserve original array)', function () {
-//   it('returns an array with the element removed', function () {
-//     let array = ['Cadence', 'Ordel', 'Marion']
-//     assert.deepEqual(
-//       ['Cadence', 'Ordel'],
-//       remove(array, 'Marion')
-//     )
-//     assert.deepEqual(['Cadence', 'Ordel', 'Marion'], array)
-//   })
+describe('remove (preserve original array)', function () {
+  it('returns an array with the element removed', function () {
+    let array = ['Cadence', 'Ordel', 'Marion']
+    assert.deepEqual(
+      ['Cadence', 'Ordel'],
+      remove(array, 'Marion')
+    )
+    assert.deepEqual(['Cadence', 'Ordel', 'Marion'], array)
+  })
 
-//   it('removes all incidences of the element', function () {
-//     let array = ['Cadence', 'Marion', 'Ordel', 'Marion']
-//     assert.deepEqual(
-//       ['Cadence', 'Ordel'],
-//       remove(array, 'Marion')
-//     )
+  it('removes all incidences of the element', function () {
+    let array = ['Cadence', 'Marion', 'Ordel', 'Marion']
+    assert.deepEqual(
+      ['Cadence', 'Ordel'],
+      remove(array, 'Marion')
+    )
 
-//     assert.deepEqual(['Cadence', 'Marion', 'Ordel', 'Marion'], array)
-//   })
-// })
+    assert.deepEqual(['Cadence', 'Marion', 'Ordel', 'Marion'], array)
+  })
+})
 
 describe('sum', function () {
   it('returns 0 for an empty array', function () {
